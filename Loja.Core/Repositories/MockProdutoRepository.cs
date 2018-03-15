@@ -14,11 +14,11 @@ namespace Loja.Core.Repositories
         {
             if (_produtos == null)
             {
-                InicializaProdutos();
+                InicializarProdutos();
             }
         }
 
-        private void InicializaProdutos()
+        private void InicializarProdutos()
         {
             _produtos = new List<Produto>
                 {
@@ -38,5 +38,6 @@ namespace Loja.Core.Repositories
         {
             return _produtos.FirstOrDefault(p => p.Id == id);
         }
+
     }
 }

@@ -11,11 +11,11 @@ namespace Loja.Web.Pages.Produtos
 {
     public class IndexModel : PageModel
     {
-        private readonly IProdutoRepository produtoRepository;
+        private readonly IProdutoRepository _produtoRepository;
 
         public IndexModel(IProdutoRepository produtoRepository)
         {
-            this.produtoRepository = produtoRepository;
+            _produtoRepository = produtoRepository;
         }
 
         public string Titulo { get; set; }
@@ -23,8 +23,9 @@ namespace Loja.Web.Pages.Produtos
 
         public void OnGet()
         {
-            Titulo = "Loja";
-            Produtos = produtoRepository.GetAll();
+            Titulo = "Loja Hoje A Noite";
+            Produtos = _produtoRepository.GetAll();
         }
+
     }
 }
