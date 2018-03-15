@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Loja.Core.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,6 +14,7 @@ namespace Loja.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IProdutoRepository, MockProdutoRepository>();
             services.AddMvc();
         }
 
