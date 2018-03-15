@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Loja.Web.Pages.Produtos
 {
-    public class ListaModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {
